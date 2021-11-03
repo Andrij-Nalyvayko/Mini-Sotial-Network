@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const downloadingUsers = () => {
-  const BASE_URL = 'https://randomuser.me/api/?inc=gender,name,picture,dob,id,nat';
+  const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   return axios.get(BASE_URL);
 };
