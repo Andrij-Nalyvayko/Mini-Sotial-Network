@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Mini-Sotial-Network/static/css/main.0b876667.chunk.css",
-    "main.js": "/Mini-Sotial-Network/static/js/main.80af5650.chunk.js",
-    "main.js.map": "/Mini-Sotial-Network/static/js/main.80af5650.chunk.js.map",
+    "main.css": "/Mini-Sotial-Network/static/css/main.0ebca8a1.chunk.css",
+    "main.js": "/Mini-Sotial-Network/static/js/main.18e68a4b.chunk.js",
+    "main.js.map": "/Mini-Sotial-Network/static/js/main.18e68a4b.chunk.js.map",
     "runtime-main.js": "/Mini-Sotial-Network/static/js/runtime-main.077c1994.js",
     "runtime-main.js.map": "/Mini-Sotial-Network/static/js/runtime-main.077c1994.js.map",
-    "static/js/2.3acf82c5.chunk.js": "/Mini-Sotial-Network/static/js/2.3acf82c5.chunk.js",
-    "static/js/2.3acf82c5.chunk.js.map": "/Mini-Sotial-Network/static/js/2.3acf82c5.chunk.js.map",
+    "static/js/2.6e2180b6.chunk.js": "/Mini-Sotial-Network/static/js/2.6e2180b6.chunk.js",
+    "static/js/2.6e2180b6.chunk.js.map": "/Mini-Sotial-Network/static/js/2.6e2180b6.chunk.js.map",
     "index.html": "/Mini-Sotial-Network/index.html",
-    "static/css/main.0b876667.chunk.css.map": "/Mini-Sotial-Network/static/css/main.0b876667.chunk.css.map",
-    "static/js/2.3acf82c5.chunk.js.LICENSE.txt": "/Mini-Sotial-Network/static/js/2.3acf82c5.chunk.js.LICENSE.txt"
+    "static/css/main.0ebca8a1.chunk.css.map": "/Mini-Sotial-Network/static/css/main.0ebca8a1.chunk.css.map",
+    "static/js/2.6e2180b6.chunk.js.LICENSE.txt": "/Mini-Sotial-Network/static/js/2.6e2180b6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.077c1994.js",
-    "static/js/2.3acf82c5.chunk.js",
-    "static/css/main.0b876667.chunk.css",
-    "static/js/main.80af5650.chunk.js"
+    "static/js/2.6e2180b6.chunk.js",
+    "static/css/main.0ebca8a1.chunk.css",
+    "static/js/main.18e68a4b.chunk.js"
   ]
 }
