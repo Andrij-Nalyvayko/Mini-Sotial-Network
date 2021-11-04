@@ -11,9 +11,6 @@ export const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<User[]>(users);
 
-  // eslint-disable-next-line no-console
-  console.log(users);
-
   useEffect(() => {
     GetUsers(downloadingUsers, setUsers);
   }, []);
