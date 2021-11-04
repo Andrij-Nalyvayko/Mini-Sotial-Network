@@ -1,26 +1,26 @@
 import React, { useState, Dispatch, SetStateAction } from 'react';
 import { ChoosingOfCountries } from './ChoosingOfCountries';
 import { SelectingGender } from './SelectingGender';
-import { Users } from '../Types/Users';
+import { User } from '../../Types/Users';
 
 type Props = {
-  users: Users[],
-  setFilteredUsers: Dispatch<SetStateAction<Users[]>>;
+  users: User[],
+  setFilteredUsers: Dispatch<SetStateAction<User[]>>;
 }
 
 export const Filters: React.FC<Props> = ({users, setFilteredUsers}) => {
   const [nationals, setNationals] = useState<string[]>([]);
-  const [gender, setGender] = useState<string>('all');
+  const [gend, setGender] = useState<string>('all');
   
   const applyFilters = () => {
     setFilteredUsers(() => {
-      if (nationals.length === 0 && gender === 'all') {
+      if (nationals.length === 0 && gend === 'all') {
 
         return users
       }
 
-      return [...users].filter((elem: Users) => {
-        return ((elem.gender === gender || gender === 'all') && (nationals.includes(elem.nationality) || nationals.length === 0));
+      return [...users].filter((elem: User) => {
+        return ((elem.gender === gend || gend === 'all') && (nationals.includes(elem.nat) || nationals.length === 0));
       })
     });
   }

@@ -11,7 +11,7 @@ export const ChoosingOfCountries: React.FC<Props> = ({ setNationals, nationals }
   
   const addNationality = (value: string) => {
     if (nationals.includes(value)) {
-      setNationals(nationals.filter((country: string) => country !==value));
+      setNationals(nationals.filter((country: string) => country !== value));
 
       return
     }
