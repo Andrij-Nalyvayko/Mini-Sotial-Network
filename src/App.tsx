@@ -9,20 +9,23 @@ import './Styles/Style.scss';
 
 export const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
-  let [filteredUsers, setFilteredUsers] = useState<User[]>(users);
+  const [filteredUsers, setFilteredUsers] = useState<User[]>(users);
+
+  // eslint-disable-next-line no-console
+  console.log(users);
 
   useEffect(() => {
     GetUsers(downloadingUsers, setUsers);
-  }, [])
+  }, []);
 
   useEffect(() => {
     setFilteredUsers(users);
-  }, [users])
+  }, [users]);
 
   return (
     <div className="my-network">
-      <Filters users={users} setFilteredUsers={setFilteredUsers}/>
-      <UserCards users={filteredUsers}/>
-    </ div>
-  )
-}
+      <Filters users={users} setFilteredUsers={setFilteredUsers} />
+      <UserCards users={filteredUsers} />
+    </div>
+  );
+};
