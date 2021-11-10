@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Filters } from './Components/Filters/Filters';
 import { useLocation } from 'react-router-dom';
 import { UserCards } from './Components/UserCards';
-import { getUsers } from './Components/GetData';
+import { GetUsers } from './Components/GetData';
 import { downloadingUsers } from './Api/api';
 import { User } from './Types/Users';
 
@@ -14,7 +14,7 @@ export const App: React.FC = () => {
   const query = new URLSearchParams(useLocation().search);
 
   useEffect(() => {
-    getUsers(downloadingUsers, setUsers, query);
+    GetUsers(downloadingUsers, setUsers, query);
   }, []);
 
   useEffect(() => {

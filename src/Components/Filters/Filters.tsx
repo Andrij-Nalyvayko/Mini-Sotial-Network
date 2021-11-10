@@ -9,8 +9,13 @@ type Props = {
   setFilteredUsers: Dispatch<SetStateAction<User[]>>;
 };
 
+type Option = {
+  gender: string,
+  countries: string[],
+}
+
 export const Filters: React.FC<Props> = () => {
-  const { register, handleSubmit } = useForm<any>();
+  const { register, handleSubmit } = useForm<Option>();
 
   return (
     <form
