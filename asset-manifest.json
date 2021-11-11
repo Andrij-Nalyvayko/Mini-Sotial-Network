@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Mini-Sotial-Network/static/css/main.70d4951f.chunk.css",
-    "main.js": "/Mini-Sotial-Network/static/js/main.2c88dc26.chunk.js",
-    "main.js.map": "/Mini-Sotial-Network/static/js/main.2c88dc26.chunk.js.map",
+    "main.js": "/Mini-Sotial-Network/static/js/main.d1248c16.chunk.js",
+    "main.js.map": "/Mini-Sotial-Network/static/js/main.d1248c16.chunk.js.map",
     "runtime-main.js": "/Mini-Sotial-Network/static/js/runtime-main.077c1994.js",
     "runtime-main.js.map": "/Mini-Sotial-Network/static/js/runtime-main.077c1994.js.map",
     "static/js/2.bd748fc0.chunk.js": "/Mini-Sotial-Network/static/js/2.bd748fc0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.077c1994.js",
     "static/js/2.bd748fc0.chunk.js",
     "static/css/main.70d4951f.chunk.css",
-    "static/js/main.2c88dc26.chunk.js"
+    "static/js/main.d1248c16.chunk.js"
   ]
 }
