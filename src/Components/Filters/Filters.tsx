@@ -19,7 +19,7 @@ export const Filters: React.FC<Props> = () => {
 
   return (
     <form
-      action="Mini-Sotial-Network/"
+      action="/"
       className="my-network__filter"
     >
 
