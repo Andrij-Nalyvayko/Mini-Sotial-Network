@@ -5,7 +5,7 @@ import { App } from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-  <Router basename="Mini-Sotial-Network/">
+  <Router>
     <App />,
   </Router>,
   document.getElementById('root'),
