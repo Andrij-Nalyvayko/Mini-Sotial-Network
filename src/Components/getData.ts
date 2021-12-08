@@ -1,29 +1,24 @@
 import { AxiosResponse } from 'axios';
-import { Users } from '../Types/Users';
+import { User } from '../Types/Users';
+import BASE_URL from '../Api/BASE_URL'
 
-const createUser = (userData: any, setUsers: (arg0: (prewData: Users[]) => any[]) => void) => {
-  const generalWay = userData.results[0];
+interface Data {
+  data: {results: User[]}
+};
 
-  const result = {
-    userID: userData.info.seed,
-    photoUrl: generalWay.picture.large,
-    fullName: `${generalWay.name.first} ${generalWay.name.last}`,
-    gender: generalWay.gender,
-    birthdayData: generalWay.dob.date.split('T')[0],
-    nationality: generalWay.nat,
-  };
-  
-  setUsers((prewData: Users[]) => [...prewData, result]);
-}
+export const GetUsers = async (
+  downloadingUsers: (url: string) => Promise<any>,
+  setUsers: (value: User[]) => void,
+  query: any,
+) => {
+  const countries = ('&nat=' + query.getAll("countries").join(','));
+  const gender = '&gender=' + query.get("gender");
 
-export const getUsers = async (
-  downloadingUsers: { (): Promise<AxiosResponse<any, any>>; (): Promise<any>; },
-  setUsers: { (value: any): void; (arg0: (prewData: Users[]) => any): void; }
-  ) => {
+  const url = `${BASE_URL}/api/?inc=gender,name,picture,dob,nat,id&results=15${gender}${countries}`;
 
-  for (let i = 0; i < 15; i++) {
-    await downloadingUsers().then(param => {
-      createUser(param.data, setUsers);
-    })
-  }
-}
+  await downloadingUsers(url).then((param: Data) => {
+    console.log(query);
+    
+    setUsers(param.data.results);
+  });
+};

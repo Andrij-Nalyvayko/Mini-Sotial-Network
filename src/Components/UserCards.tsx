@@ -1,25 +1,24 @@
 import React from 'react';
-import { Users } from './Types/Users';
+import { User } from '../Types/Users';
 
 type Props = {
-  users: Users[],
-}
+  users: User[],
+};
 
 export const UserCards: React.FC<Props> = ({ users }) => {
-
   return (
     <div className="cards">
-      {users.map((user: Users) => {
+      {users.map((user: User) => {
         return (
-          <div key={user.userID} className="my-network__card">
+          <div key={user.dob.date} className="my-network__card">
 
             <div className="my-network__card__img">
-              <img src={user.photoUrl} alt={`Not found img`}/>
+              <img src={user.picture.large} alt="Not found img" />
             </div>
 
             <p>
               <strong>
-                {user.fullName}
+                {`${user.name.first} ${user.name.last}`}
               </strong>
             </p>
 
@@ -28,14 +27,15 @@ export const UserCards: React.FC<Props> = ({ users }) => {
             </p>
 
             <p>
-              {user.nationality}
+              {user.nat}
             </p>
 
             <p>
-              {user.birthdayData}
+              {user.dob.date.split('T')[0]}
             </p>
-          </div>)
+          </div>
+        );
       })}
     </div>
-  )
-}
+  );
+};
